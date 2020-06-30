@@ -1,14 +1,13 @@
 package aspectos;
 
+import ventanas.VentanaPrincipal;
 
 public aspect AspectColor {
 	
-	pointcut changedColor(String nombre):
-		call(void cambiarColor(..,String)) && args(..,nombre);
+	pointcut cambioEstado(VentanaPrincipal vp, String nombre):
+		target(vp) && call(void cambiarColor(.., *)) && args(.., nombre);
 	
-	after(String nombre): 
-		changedColor(nombre){
-			System.out.println("Fondo cambio a color: " + nombre);
+	after(VentanaPrincipal vp, String nombre): cambioEstado(vp, nombre){
+		vp.getObserver().update(vp, nombre);
 	}
-
 }
