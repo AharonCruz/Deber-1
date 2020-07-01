@@ -1,17 +1,13 @@
 package ventanas;
 
-
-
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.paint.*;
-
 import javafx.scene.layout.VBox;
 
 
 public class VentanaPrincipal  {
 	private VBox root;
-	
 	private Button btAzul;
 	private Button btVerde;
 	private Button btRojo;
@@ -23,8 +19,8 @@ public class VentanaPrincipal  {
 	public void crearVentana() {
 		root = new VBox();
 		btAzul = new Button("  Azul  ");
-		btVerde = new Button("  Rojo  ");
-		btRojo = new Button(" Verde ");
+		btVerde = new Button(" Verde ");
+		btRojo = new Button("  Rojo  ");
 		
 		root.setAlignment(Pos.CENTER);
 		root.setSpacing(20);

@@ -11,7 +11,6 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		
 		VentanaPrincipal vp = new VentanaPrincipal();
 		
 		Scene scene = new Scene(vp.getRoot(),250,250);
