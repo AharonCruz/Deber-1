@@ -8,6 +8,6 @@ public aspect AspectColor {
 		target(vp) && call(void cambiarColor(.., *)) && args(.., nombre);
 	
 	after(VentanaPrincipal vp, String nombre): cambioEstado(vp, nombre){
-		vp.getObserver().update(vp, nombre);
+		System.out.println("Fondo cambio a color: " + nombre);
 	}
 }

@@ -1,24 +1,22 @@
 package ventanas;
 
 
-import java.util.Observable;
+
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.paint.*;
-import observers.Observador;
+
 import javafx.scene.layout.VBox;
 
 
-public class VentanaPrincipal extends Observable {
+public class VentanaPrincipal  {
 	private VBox root;
-	private Observador obs;
+	
 	private Button btAzul;
 	private Button btVerde;
 	private Button btRojo;
 	
-	public VentanaPrincipal(Observador obs){
-		this.obs = obs;
-		this.addObserver(obs);
+	public VentanaPrincipal(){
 		crearVentana();
 	}
 	
@@ -47,7 +45,5 @@ public class VentanaPrincipal extends Observable {
 		return root;
 	}
 	
-	public Observador getObserver() {
-		return obs;
-	}
+	
 }
